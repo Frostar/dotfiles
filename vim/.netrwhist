@@ -1,0 +1,9 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =7
+let g:netrw_dirhist_1='/Users/frost/repo/AMS/Jens/LCD/Graphic/Graphic'
+let g:netrw_dirhist_2='/Users/frost/repo/AMS/Jens/Graphic/Graphic'
+let g:netrw_dirhist_3='/Users/frost/repo/DSPC/vector_data'
+let g:netrw_dirhist_4='/Users/frost/iha_repo/AMS/Jens/Graphic/Graphic'
+let g:netrw_dirhist_5='/Users/frost/iha_repo/dspc/exercise9'
+let g:netrw_dirhist_6='/Users/frost/iha_repo/dspc/exercise2/software/.metadata'
+let g:netrw_dirhist_7='/Library/Application Support/Avid/Audio/Plug-Ins/Serum.aaxplugin'
