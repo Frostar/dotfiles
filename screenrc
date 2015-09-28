@@ -1,0 +1,4 @@
+term screen-256color
+
+hardstatus alwayslastline
+hardstatus string '%{= Kw} %3{W}%-w%{G}%n %t%{W}%+w %{-}%= %{W}%H%?%{-} %{w}-- %{W}%l%?%{-} %{w}-- %{W}%D %M %d %{G}%c  '
