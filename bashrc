@@ -38,6 +38,8 @@ PS1='\[\033[1;97;46m\]\u\[\033[m\]\[\033[30;46m\] \W$(git_branch)\[\033[m\]\[\03
 # CLI colors
 export CLICOLORS=1
 export LSCOLORS=ExFxBxDxCxegedabagacad
+export TERM=xterm-color
+
 
 # For using rm !(file)
 shopt -s extglob
