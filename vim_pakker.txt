@@ -1,0 +1,13 @@
+Følgende pakker er installet for vim.
+
+NERDTree:
+https://github.com/scrooloose/nerdtree
+
+Badwolf (colorscheme):
+https://github.com/sjl/badwolf
+
+vim-fugitive (git interface):
+https://github.com/tpope/vim-fugitive
+
+vim-airline (statuslinje):
+https://github.com/bling/vim-airline
