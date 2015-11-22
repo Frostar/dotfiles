@@ -11,6 +11,13 @@ set number
 " textwidth 80, standard for most code
 " set textwidth=80
 
+" Remap arrow keys nothing
+noremap <Up> <NOP>
+noremap <Down> <NOP>
+noremap <Left> <NOP>
+noremap <Right> <NOP>
+
+
 " identation
 set smartindent
 set tabstop=4
