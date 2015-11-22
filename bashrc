@@ -28,8 +28,7 @@ alias matlab='/Applications/MATLAB_R2014b.app/bin/matlab -nodesktop'
 # SSH
 alias jflserver='ssh jfl@84.238.29.223'
 # fortune from jfl server
-alias jfl_exe='jflserver -X '
-alias fortune='jfl_exe fortune'
+alias fortune='jflserver fortune'
 # Prompt
 function _update_ps1() {
     PS1="$(~/.bash/powerline-shell/powerline-shell.py --cwd-mode dironly  $? 2> /dev/null)"
