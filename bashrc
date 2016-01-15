@@ -17,6 +17,7 @@ alias systemlog='tail -f /var/log/system.log'
 
 alias raspi='ssh pi@84.238.29.223 -p 9092'
 alias naboo='ssh jens@84.238.29.223 -p 9093'
+alias lakeside='ssh jfl@www.lakeside.dk'
 
 
 
