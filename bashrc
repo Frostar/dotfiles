@@ -25,7 +25,7 @@ alias lakeside='ssh jfl@www.lakeside.dk'
 # launch sublime
 alias sublime='/Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/subl'
 # launch console matlab
-alias matlab='/Applications/MATLAB_R2014b.app/bin/matlab -nodesktop'
+alias matlab='/Applications/MATLAB_R2015b.app/bin/matlab -nodesktop'
 # SSH
 alias jflserver='ssh jfl@84.238.29.223'
 # fortune from jfl server
