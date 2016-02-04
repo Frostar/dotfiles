@@ -11,6 +11,9 @@ set number
 " textwidth 80, standard for most code
 " set textwidth=80
 
+" Highlight cursor line
+set cursorline
+
 " Remap arrow keys nothing
 noremap <Up> <NOP>
 noremap <Down> <NOP>
