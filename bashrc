@@ -52,8 +52,6 @@ export CLICOLORS=1
 export LSCOLORS=ExFxBxDxCxegedabagacad
 export TERM=xterm-256color
 
-export LC_ALL="en_DK.UTF-8"
-
 # For using rm !(file)
 shopt -s extglob
 
