@@ -52,11 +52,8 @@ export CLICOLORS=1
 export LSCOLORS=ExFxBxDxCxegedabagacad
 export TERM=xterm-256color
 
+export LC_ALL="en_DK.UTF-8"
 
 # For using rm !(file)
 shopt -s extglob
-
-# MacPorts Installer addition on 2015-01-20_at_20:50:47: adding an appropriate PATH variable for use with MacPorts.
-export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
-# Finished adapting your PATH environment variable for use with MacPorts.
 
