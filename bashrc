@@ -22,8 +22,8 @@ alias lakeside='ssh jfl@www.lakeside.dk'
 
 ### JFL Macbook Pro
 # link macvim as vim
-alias vi='/Applications/MacVim.App/Contents/MacOS/Vim'
-alias vim='/Applications/MacVim.App/Contents/MacOS/Vim'
+#alias vi='/Applications/MacVim.App/Contents/MacOS/Vim'
+#alias vim='/Applications/MacVim.App/Contents/MacOS/Vim'
 # launch sublime
 alias sublime='/Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/subl'
 # launch console matlab
