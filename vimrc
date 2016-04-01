@@ -20,6 +20,8 @@ noremap <Down> <NOP>
 noremap <Left> <NOP>
 noremap <Right> <NOP>
 
+" fix backspace
+set backspace=2
 
 " identation
 set smartindent
@@ -39,6 +41,9 @@ set laststatus=2
 let g:airline_theme='badwolf'
 let g:airline_powerline_fonts=1
 let g:airline#extension#enable#branch=1
+
+" for C-language files use the default YouCompleteMe conf
+let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
 
 
 " hlsearch trailing
