@@ -36810,21 +36810,21 @@
 	<key>NSWindow Frame NSFontPanel</key>
 	<string>890 297 445 77 0 0 1440 877 </string>
 	<key>NSWindow Frame Preferences</key>
-	<string>485 84 924 485 0 0 1440 877 </string>
+	<string>643 162 924 485 0 0 1920 1057 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>408 92 668 768 0 0 1440 877 </string>
+	<string>2321 71 640 986 1920 56 1280 1001 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>4 448 640 426 0 0 1440 877 </string>
+	<string>2514 619 640 426 1920 56 1280 1001 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
-	<string>90 201 640 634 0 0 1440 877 </string>
+	<string>1935 71 640 986 1920 56 1280 1001 </string>
 	<key>NSWindow Frame iTerm Window 3</key>
-	<string>113 368 640 426 0 0 1440 877 </string>
+	<string>772 392 640 586 0 0 1920 1057 </string>
 	<key>NSWindow Frame iTerm Window 4</key>
-	<string>6 56 738 810 0 0 1440 877 </string>
+	<string>1931 539 640 426 1920 56 1280 1001 </string>
 	<key>NSWindow Frame iTerm Window 5</key>
-	<string>381 3 640 426 0 0 1920 1057 </string>
+	<string>1973 63 640 986 1920 56 1280 1001 </string>
 	<key>NSWindow Frame iTerm Window 6</key>
-	<string>754 325 570 426 0 0 1680 1027 </string>
+	<string>2402 367 640 426 1920 56 1280 1001 </string>
 	<key>NeverWarnAboutShortLivedSessions_E05ED672-55B8-4D94-B4A8-EBD3AFFC8B32</key>
 	<true/>
 	<key>New Bookmarks</key>
@@ -37427,7 +37427,7 @@
 			<key>Send Code When Idle</key>
 			<false/>
 			<key>Set Local Environment Vars</key>
-			<true/>
+			<false/>
 			<key>Shortcut</key>
 			<string></string>
 			<key>Silence Bell</key>
@@ -37560,7 +37560,7 @@
 	<key>NoSyncTimeOfLastPromo</key>
 	<real>477743555.20252001</real>
 	<key>NoSyncTimeOfLastPromoDownload</key>
-	<real>482489369.44537401</real>
+	<real>483604754.10007101</real>
 	<key>OnlyWhenMoreTabs</key>
 	<true/>
 	<key>OpenArrangementAtStartup</key>
@@ -37625,7 +37625,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2016-04-16T08:49:18Z</date>
+	<date>2016-05-01T12:12:56Z</date>
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>ShowBookmarkName</key>
