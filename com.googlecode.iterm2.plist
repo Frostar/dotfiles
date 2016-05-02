@@ -36810,15 +36810,15 @@
 	<key>NSWindow Frame NSFontPanel</key>
 	<string>890 297 445 77 0 0 1440 877 </string>
 	<key>NSWindow Frame Preferences</key>
-	<string>643 162 924 485 0 0 1920 1057 </string>
+	<string>333 111 924 485 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>2321 71 640 986 1920 56 1280 1001 </string>
+	<string>116 204 640 426 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>2514 619 640 426 1920 56 1280 1001 </string>
+	<string>780 177 640 426 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
-	<string>1935 71 640 986 1920 56 1280 1001 </string>
+	<string>2019 63 640 986 1920 56 1280 1001 </string>
 	<key>NSWindow Frame iTerm Window 3</key>
-	<string>772 392 640 586 0 0 1920 1057 </string>
+	<string>772 552 640 426 0 0 1920 1057 </string>
 	<key>NSWindow Frame iTerm Window 4</key>
 	<string>1931 539 640 426 1920 56 1280 1001 </string>
 	<key>NSWindow Frame iTerm Window 5</key>
@@ -37427,7 +37427,7 @@
 			<key>Send Code When Idle</key>
 			<false/>
 			<key>Set Local Environment Vars</key>
-			<false/>
+			<true/>
 			<key>Shortcut</key>
 			<string></string>
 			<key>Silence Bell</key>
@@ -37560,7 +37560,7 @@
 	<key>NoSyncTimeOfLastPromo</key>
 	<real>477743555.20252001</real>
 	<key>NoSyncTimeOfLastPromoDownload</key>
-	<real>483604754.10007101</real>
+	<real>483797624.32584703</real>
 	<key>OnlyWhenMoreTabs</key>
 	<true/>
 	<key>OpenArrangementAtStartup</key>
