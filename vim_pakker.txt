@@ -11,3 +11,9 @@ https://github.com/tpope/vim-fugitive
 
 vim-airline (statuslinje):
 https://github.com/bling/vim-airline
+
+vim-airline themes (temaer for statusline)
+https://github.com/vim-airline/vim-airline-themes
+
+YouCompleteMe (code completion) (Husk compile og læs man)
+https://github.com/Valloric/YouCompleteMe
