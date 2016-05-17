@@ -41,10 +41,14 @@ set laststatus=2
 let g:airline_theme='badwolf'
 let g:airline_powerline_fonts=1
 let g:airline#extension#enable#branch=1
+let g:airline_exclude_preview = 1
 
 " for C-language files use the default YouCompleteMe conf
 let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
 
+" YouCompleteMe preview handling
+" let g:ycm_autoclose_preview_window_after_completion = 1
+let g:ycm_autoclose_preview_window_after_insertion = 1
 
 " hlsearch trailing
 set hlsearch
