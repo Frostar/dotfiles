@@ -15,7 +15,7 @@ git_branch() {
 # System log
 alias systemlog='tail -f /var/log/system.log'
 
-alias raspi='ssh pi@84.238.29.223 -p 9092'
+alias raspi='ssh pi@84.238.86.147 -p 9092'
 alias lakeside='ssh jfl@www.lakeside.dk'
 
 
@@ -29,7 +29,7 @@ alias sublime='/Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/sub
 # launch console matlab
 alias matlab='/Applications/MATLAB_R2015b.app/bin/matlab -nodesktop'
 # SSH
-alias jflserver='ssh jfl@84.238.29.223'
+alias jflserver='ssh jfl@84.238.86.147'
 # fortune from jfl server
 alias fortune='jflserver fortune'
 # Prompt
