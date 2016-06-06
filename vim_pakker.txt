@@ -17,3 +17,6 @@ https://github.com/vim-airline/vim-airline-themes
 
 YouCompleteMe (code completion) (Husk compile og læs man)
 https://github.com/Valloric/YouCompleteMe
+
+Vim-Latex (LaTeX Handy), anbefales at køre i Gvim
+http://vim-latex.sourceforge.net
