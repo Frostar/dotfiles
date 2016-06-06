@@ -35,9 +35,6 @@ set expandtab
 " invoke plugin depending on filetype
 filetype plugin on
 
-" Let grep always generate filename (Vim-Latex recommend)
-set grepprg=grep\ -nH\ $*
-
 " terminal colors
 set t_Co=256
 
@@ -55,9 +52,6 @@ let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/third_party/ycmd/
 " YouCompleteMe preview handling
 " let g:ycm_autoclose_preview_window_after_completion = 1
 let g:ycm_autoclose_preview_window_after_insertion = 1
-
-" Vim-Latex, associate .tex with LaTeX
-let g:tex_flavor='latex'
 
 " hlsearch trailing
 set hlsearch
