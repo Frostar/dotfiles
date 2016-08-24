@@ -15,6 +15,10 @@ git_branch() {
 # System log
 alias systemlog='tail -f /var/log/system.log'
 
+# KWM manager
+alias kwm_start='launchctl load -w ~/Library/LaunchAgents/homebrew.mxcl.kwm.plist'
+alias kwm_stop='launchctl unload -w ~/Library/LaunchAgents/homebrew.mxcl.kwm.plist'
+
 alias raspi='ssh pi@84.238.86.147 -p 9092'
 alias lakeside='ssh jfl@www.lakeside.dk'
 
