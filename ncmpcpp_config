@@ -22,3 +22,4 @@ main_window_color = white
 progressbar_elapsed_color = white
 statusbar_color = white
 
+data_fetching_delay = yes
