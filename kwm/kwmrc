@@ -117,6 +117,7 @@ kwmc rule owner="iTerm2" properties={role="AXDialog"}
 
 //kwmc rule owner="Mail" properties={float="true"}
 kwmc rule owner="Stickies" properties={float="true"}
+kwmc rule owner="Parallels\ Desktop" properties={float="true"}
 
 /* The following command creates a rule that
    captures an application to the given screen,
@@ -128,22 +129,24 @@ kwmc rule owner="Stickies" properties={float="true"}
 kwmc config border focused on
 kwmc config border focused size 2
 //kwmc config border focused color 0xFFBDD322
-kwmc config border focused color 0xFFbd93f9
-kwmc config border focused radius 6
+//kwmc config border focused color 0xFFbd93f9
+kwmc config border focused color 0xFF157Ef5
+kwmc config border focused radius 5
 
 // Enable border for marked window
 kwmc config border marked on
 kwmc config border marked size 2
 //kwmc config border marked color 0xFFCC5577
 kwmc config border marked color 0xFFf8f8f2
-kwmc config border marked radius 6
+kwmc config border marked radius 5
 
 // Enable the prefix mode
 kwmc mode prefix prefix on
 kwmc mode prefix timeout 0.75
 kwmc mode prefix restore default
 //kwmc mode prefix color 0xFF458588
-kwmc mode prefix color 0xFF50f17b
+//kwmc mode prefix color 0xFF50f17b
+kwmc mode prefix color 0xFFec24e9
 
 /*  Default Keybinds */
 // Activate prefix mode
