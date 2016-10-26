@@ -425,6 +425,8 @@
 	<integer>0</integer>
 	<key>HotkeyCode</key>
 	<integer>0</integer>
+	<key>HotkeyMigratedFromSingleToMulti</key>
+	<true/>
 	<key>HotkeyModifiers</key>
 	<integer>0</integer>
 	<key>IRMemory</key>
@@ -487,20 +489,22 @@
 	<string>890 297 445 77 0 0 1440 877 </string>
 	<key>NSWindow Frame Preferences</key>
 	<string>149 420 606 456 0 0 1440 877 </string>
+	<key>NSWindow Frame SharedPreferences</key>
+	<string>269 122 796 473 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>726 11 703 859 0 0 1440 877 </string>
+	<string>725 14 347 418 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>726 452 703 411 0 0 1440 877 </string>
+	<string>11 11 703 619 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
-	<string>367 452 346 411 0 0 1440 877 </string>
+	<string>4 0 1436 877 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 3</key>
-	<string>11 11 1417 859 0 0 1440 877 </string>
+	<string>11 1 675 635 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 4</key>
-	<string>727 665 164 203 0 0 1440 877 </string>
+	<string>10 452 346 411 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 5</key>
-	<string>727 776 164 91 0 0 1440 877 </string>
+	<string>11 721 1263 683 0 0 2560 1417 </string>
 	<key>NSWindow Frame iTerm Window 6</key>
-	<string>-1013 660 115 75 -1024 0 1024 745 </string>
+	<string>11 721 1263 683 0 0 2560 1417 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -1283,6 +1287,8 @@
 	<false/>
 	<key>PasteFromClipboard</key>
 	<false/>
+	<key>PasteTabToStringTabStopSize</key>
+	<integer>4</integer>
 	<key>PointerActions</key>
 	<dict>
 		<key>Button,1,1,,</key>
@@ -1337,7 +1343,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2016-09-06T08:14:37Z</date>
+	<date>2016-10-19T12:54:16Z</date>
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>ShowBookmarkName</key>
@@ -1381,7 +1387,7 @@
 	<key>WordCharacters</key>
 	<string>/-+\~_.</string>
 	<key>iTerm Version</key>
-	<string>3.0.8</string>
+	<string>3.0.git.2b2f92ba49</string>
 	<key>kCPKSelectionViewPreferredModeKey</key>
 	<integer>0</integer>
 	<key>kCPKSelectionViewShowHSBTextFieldsKey</key>
