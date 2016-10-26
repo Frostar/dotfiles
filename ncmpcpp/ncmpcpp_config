@@ -8,16 +8,13 @@ data_fetching_delay = yes
 main_window_color = white
 header_visibility = "yes"
 titles_visibility = "no"
-song_columns_list_format = "(35)[cyan]{t} (30)[green]{a} $R(30)[red]{b}"
+song_columns_list_format = "(35)[cyan]{t} (30)[yellow]{a} $R(30)[red]{b}"
 discard_colors_if_item_is_selected = "yes"
-now_playing_prefix = "$8♪$9 $b"
-now_playing_suffix = "$/b $8♪$9"
 
 # Formatting statusbar
 progressbar_elapsed_color = white
 statusbar_color = white
-#song_status_format = "{$b$7%t$/b$9} by {$b$3%a$/b$9} on {$b$2%b$/b$9} (%y)"
-song_status_format = "{$b$7%t$/b$9} by {$b$3%a$/b$9} on {$b$2%b$/b$9} (%y)"
+song_status_format = "{$b$7%t$/b$9} by {$b$4%a$/b$9} on {$b$2%b$/b$9} (%y)"
 progressbar_look = "━▬─"
 display_bitrate = "yes"
 
