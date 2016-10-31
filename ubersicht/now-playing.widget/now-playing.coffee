@@ -109,7 +109,8 @@ p
   whitespace: nowrap
   text-overflow: ellipsi5
   color: rgba(255,255,255,0.8)
-  width: 180px
+  //width: 180px
+  width: 300px
 
 #album
   font-size: 0.5rem
