@@ -1,4 +1,4 @@
-command: 'nerdbar.widget/lib/get_track.sh'
+command: "echo $(/usr/local/bin/mpc current --format '%artist% - %title%')"
 
 refreshFrequency: 1000 # ms
 
