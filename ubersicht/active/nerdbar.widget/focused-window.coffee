@@ -1,11 +1,21 @@
 command: "echo $(/usr/local/bin/kwmc query space active tag)"
 
-# command: "echo $(/usr/local/bin/kwmc query window focused name)"
-
 refreshFrequency: 1000 # ms
 
 render: (output) ->
-  "#{output}"
+  """
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" />
+  <div class="foc"
+    <span></span>
+    <span class="icon"></span>
+  </div>
+  """
+
+update: (output, el) ->
+    $(".foc span:first-child", el).text("  #{output}")
+    $icon = $(".foc span.icon", el)
+    $icon.removeClass().addClass("icon")
+    $icon.addClass("fa fa-columns")
 
 style: """
   -webkit-font-smoothing: antialiased
@@ -13,8 +23,9 @@ style: """
   font: 13px  Helvetica Neue
   height: 16px
   left: 10px
+  width: 500px
+  white-space: nowrap
   overflow: hidden
   text-overflow: ellipsis
   top: 2px
-  width: 500px
 """
