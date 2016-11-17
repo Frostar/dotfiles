@@ -752,7 +752,7 @@
 	<key>EnableRendezvous</key>
 	<false/>
 	<key>FocusFollowsMouse</key>
-	<false/>
+	<true/>
 	<key>FsTabDelay</key>
 	<real>1</real>
 	<key>HiddenAFRStrokeThickness</key>
@@ -844,17 +844,17 @@
 	<key>NSWindow Frame Preferences</key>
 	<string>218 593 606 456 0 0 1680 1050 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>129 569 918 381 0 0 1680 1050 </string>
+	<string>129 590 918 452 0 0 1680 1050 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>846 12 822 1012 0 0 1680 1050 </string>
+	<string>846 17 822 996 0 0 1680 1050 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>12 12 1655 1012 0 0 1680 1050 </string>
+	<string>11 520 822 500 0 0 1680 1050 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
-	<string>846 12 822 1012 0 0 1680 1050 </string>
+	<string>12 17 1655 996 0 0 1680 1050 </string>
 	<key>NSWindow Frame iTerm Window 3</key>
-	<string>847 524 402 500 0 0 1680 1050 </string>
+	<string>12 17 1655 996 0 0 1680 1050 </string>
 	<key>NSWindow Frame iTerm Window 4</key>
-	<string>472 452 605 420 0 0 1440 900 </string>
+	<string>429 520 402 500 0 0 1680 1050 </string>
 	<key>NSWindow Frame iTerm Window 5</key>
 	<string>11 721 1263 683 0 0 2560 1417 </string>
 	<key>NSWindow Frame iTerm Window 6</key>
@@ -1701,8 +1701,10 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2016-11-13T10:27:10Z</date>
+	<date>2016-11-15T22:06:36Z</date>
 	<key>SavePasteHistory</key>
+	<false/>
+	<key>Secure Input</key>
 	<false/>
 	<key>ShowBookmarkName</key>
 	<false/>
