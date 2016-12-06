@@ -104,8 +104,9 @@ p
   text-shadow: 0 0 15px rgba(255,255,255,0.1)
 
 #artist, #album
-  font-size: 0.6rem
-  overflow-x: hidden
+  font-size: 0.9rem
+  line-height: 1.0rem
+  //overflow-x: hidden
   whitespace: nowrap
   text-overflow: ellipsi5
   color: rgba(255,255,255,0.8)
@@ -113,7 +114,7 @@ p
   width: 300px
 
 #album
-  font-size: 0.5rem
+  font-size: 0.8rem
   font-style: regular
   color: rgba(255,255,255,0.6)
 
@@ -121,7 +122,7 @@ p
   font-weight: 700
   padding-right: 20px
   margin: 0.2rem 0 0
-  line-height: 1.1em
+  line-height: 1.5rem
 
 if alt-layout
   bottom: 0px

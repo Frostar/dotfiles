@@ -21,6 +21,6 @@ style: """
   -webkit-font-smoothing: antialiased
   color: #D6E7EE
   font: 13px  Helvetica Neue
-  right: 400px
+  right: 380px
   top: 2px
 """

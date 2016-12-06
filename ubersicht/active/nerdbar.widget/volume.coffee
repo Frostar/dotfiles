@@ -5,8 +5,7 @@ refreshFrequency: 1000 # ms
 render: (output) ->
   """
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" />
-  <div class="battery"
-    <span></span>
+  <div class="battery">
     <span class="icon"></span>
   </div>
   """
