@@ -1181,17 +1181,17 @@
 	<key>NSWindow Frame NSColorPanel</key>
 	<string>440 66 228 325 0 0 1440 877 </string>
 	<key>NSWindow Frame NSFontPanel</key>
-	<string>1105 223 445 77 0 0 1680 1050 </string>
+	<string>640 391 445 77 0 0 1280 800 </string>
 	<key>NSWindow Frame Preferences</key>
 	<string>218 593 606 456 0 0 1680 1050 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>129 586 918 381 0 0 1680 1050 </string>
+	<string>71 262 918 495 0 0 1280 800 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>846 17 822 996 0 0 1680 1050 </string>
+	<string>11 14 1258 758 0 0 1280 800 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>11 520 822 500 0 0 1680 1050 </string>
+	<string>-1268 15 1256 756 -1280 0 1280 800 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
-	<string>11 17 822 996 0 0 1680 1050 </string>
+	<string>12 15 941 1156 0 0 1920 1200 </string>
 	<key>NSWindow Frame iTerm Window 3</key>
 	<string>846 520 822 500 0 0 1680 1050 </string>
 	<key>NSWindow Frame iTerm Window 4</key>
@@ -1858,7 +1858,7 @@
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Normal Font</key>
-			<string>MesloLGSDZ-RegularForPowerline 12</string>
+			<string>MesloLGSDZ-RegularForPowerline 10</string>
 			<key>Only The Default BG Color Uses Transparency</key>
 			<true/>
 			<key>Option Key Sends</key>
@@ -2042,7 +2042,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2016-12-04T11:05:32Z</date>
+	<date>2016-12-08T11:47:48Z</date>
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>Secure Input</key>
