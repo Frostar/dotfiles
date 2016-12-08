@@ -50,7 +50,7 @@ kwmc bindsym hyper-h window -f west
 
 // Set default values for screen padding
 //kwmc config padding 40 20 20 20
-kwmc config padding 30 10 10 10
+kwmc config padding 25 10 10 10
 
 
 // Set default values for container gaps
@@ -127,7 +127,7 @@ kwmc rule owner="Parallels\ Desktop" properties={float="true"}
 
 // Enable border for focused window
 kwmc config border focused on
-kwmc config border focused size 4
+kwmc config border focused size 3
 //kwmc config border focused color 0xFFBDD322
 //kwmc config border focused color 0xFFbd93f9
 kwmc config border focused color 0xFF157Ef5
