@@ -31,7 +31,7 @@ style: """
   -webkit-font-smoothing: antialiased
   text-align: center
   color: #D6E7EE
-  font: 13px Helvetica Neue
+  font: 10px Helvetica Neue
   height: 16px
   left: 25%
   overflow: hidden

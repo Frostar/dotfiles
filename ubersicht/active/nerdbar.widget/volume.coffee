@@ -28,7 +28,7 @@ icon: (output) =>
 style: """
   -webkit-font-smoothing: antialiased
   color: #D6E7EE
-  font: 13px  Helvetica Neue
-  right: 275px
+  font: 10px  Helvetica Neue
+  right: 200px
   top: 2px
 """

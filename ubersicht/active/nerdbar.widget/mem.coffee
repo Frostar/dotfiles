@@ -20,7 +20,7 @@ update: (output, el) ->
 style: """
   -webkit-font-smoothing: antialiased
   color: #D6E7EE
-  font: 13px  Helvetica Neue
-  right: 380px
+  font: 10px  Helvetica Neue
+  right: 270px
   top: 2px
 """

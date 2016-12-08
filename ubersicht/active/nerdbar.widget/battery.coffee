@@ -32,9 +32,9 @@ icon: (output) =>
 
 style: """
   -webkit-font-smoothing: antialiased
-  font: 13px  Helvetica Neue
+  font: 10px  Helvetica Neue
   top: 2px
-  right: 205px
+  right: 150px
   color: #D6E7EE
   span
     color: #D6E7EE
