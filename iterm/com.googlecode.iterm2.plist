@@ -1441,15 +1441,15 @@
 	<key>NSWindow Frame Preferences</key>
 	<string>218 593 606 456 0 0 1680 1050 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>71 380 918 381 0 0 1280 800 </string>
+	<string>94 345 796 473 0 0 1440 900 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>11 14 1258 758 0 0 1280 800 </string>
+	<string>12 12 700 862 0 0 1440 900 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>11 14 622 758 0 0 1280 800 </string>
+	<string>12 12 700 862 0 0 1440 900 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
-	<string>12 15 941 1156 0 0 1920 1200 </string>
+	<string>12 452 700 420 0 0 1440 900 </string>
 	<key>NSWindow Frame iTerm Window 3</key>
-	<string>846 520 822 500 0 0 1680 1050 </string>
+	<string>12 541 940 511 0 0 1920 1080 </string>
 	<key>NSWindow Frame iTerm Window 4</key>
 	<string>12 17 1655 996 0 0 1680 1050 </string>
 	<key>NSWindow Frame iTerm Window 5</key>
@@ -2236,6 +2236,8 @@
 	<false/>
 	<key>OpenBookmark</key>
 	<false/>
+	<key>OpenNoWindowsAtStartup</key>
+	<false/>
 	<key>OpenTmuxWindowsIn</key>
 	<integer>0</integer>
 	<key>PassOnControlClick</key>
@@ -2287,6 +2289,8 @@
 	<integer>8</integer>
 	<key>RightOption</key>
 	<integer>3</integer>
+	<key>RunJobsInServers</key>
+	<false/>
 	<key>SUAutomaticallyUpdate</key>
 	<true/>
 	<key>SUEnableAutomaticChecks</key>
@@ -2298,7 +2302,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2016-12-13T11:38:18Z</date>
+	<date>2017-01-08T14:12:48Z</date>
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>Secure Input</key>
@@ -2344,7 +2348,7 @@
 	<key>WordCharacters</key>
 	<string>/-+\~_.</string>
 	<key>iTerm Version</key>
-	<string>3.0.12</string>
+	<string>3.0.13</string>
 	<key>kCPKSelectionViewPreferredModeKey</key>
 	<integer>0</integer>
 	<key>kCPKSelectionViewShowHSBTextFieldsKey</key>
