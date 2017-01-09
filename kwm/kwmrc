@@ -130,16 +130,16 @@ kwmc config border focused on
 kwmc config border focused size 3
 //kwmc config border focused color 0xFFBDD322
 //kwmc config border focused color 0xFFbd93f9
-kwmc config border focused color 0xFF157Ef5
-//kwmc config border focused color 0xFFF7F7F7
-kwmc config border focused radius 5
+//kwmc config border focused color 0xFF157Ef5
+kwmc config border focused color 0xFFB4F89D
+kwmc config border focused radius 7
 
 // Enable border for marked window
 kwmc config border marked on
 kwmc config border marked size 2
 //kwmc config border marked color 0xFFCC5577
 kwmc config border marked color 0xFFf8f8f2
-kwmc config border marked radius 5
+kwmc config border marked radius 7
 
 // Enable the prefix mode
 kwmc mode prefix prefix on
