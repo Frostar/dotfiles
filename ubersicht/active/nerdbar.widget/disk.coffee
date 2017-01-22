@@ -1,4 +1,4 @@
-command: "df -H | grep '/dev/disk1' | awk '{print $8}'"
+command: "df -H | grep '/dev/disk1' | awk '{print $5}'"
 
 refreshFrequency: 60000 # ms
 
@@ -21,6 +21,6 @@ style: """
   -webkit-font-smoothing: antialiased
   color: #D6E7EE
   font: 10px  Helvetica Neue
-  right: 315px
+  right: 320px
   top: 2px
 """
