@@ -59,6 +59,10 @@ set hlsearch
 " colorscheme badwolf
 colorscheme badwolf
 
+" whitespaces
+set list
+set listchars=space:·,tab:»\ ,extends:›,precedes:‹
+
 " trailing whitespace
 highlight ExtraWhitespace ctermbg=red guibg=red
 match ExtraWhitespace /\s\+$/
