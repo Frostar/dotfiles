@@ -1,10 +1,10 @@
 command: 'nerdbar.widget/lib/get_track.sh'
 
-refreshFrequency: 1000 # ms
+refreshFrequency: 2000 # ms
 
 render: (output) ->
   """
-  <link rel="stylesheet" href="./assets/font-awesome/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
   <div class="np"
     <span></span>
     <span class="icon"></span>
@@ -12,20 +12,19 @@ render: (output) ->
   """
 
 update: (output, el) ->
-    $(".np span:first-child", el).text("  #{output}")
+    values = output.split('@',2);
+    $(".np span:first-child", el).text("  #{values[0]}")
     $icon = $(".np span.icon", el)
     $icon.removeClass().addClass("icon")
-    $icon.addClass("fa #{@icon(output)}")
+    $icon.addClass("fa #{@icon(values[1])}")
 
 icon: (status) =>
-    return if status.substring(0, 9) == "[stopped]"
-        "fa-stop-circle-o"
-    else if status.substring(0, 8) == "[paused]"
-        "fa-pause-circle-o"
-    else if status.substring(0, 17) == "Connection failed"
-        "fa-times-circle-o"
+    return if status.startsWith("playing")
+        "fa-play"
+    else if status.startsWith("paused")
+        "fa-pause"
     else
-        "fa-play-circle-o"
+        ""
 
 style: """
   -webkit-font-smoothing: antialiased
@@ -34,8 +33,6 @@ style: """
   font: 10px Helvetica Neue
   height: 16px
   left: 25%
-  overflow: hidden
-  text-overflow: ellipsis
   top: 2px
   width: 50%
 """

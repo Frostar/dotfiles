@@ -1,6 +1,6 @@
 #!/bin/bash
 
-check=`ps -ef | grep "/usr/local/bin/mopidy" | grep -v "grep" | wc -l | cut -d " " -f8`
+check=`ps -ef | grep "/usr/local/opt/mopidy/bin/mopidy" | grep -v "grep" | wc -l | cut -d " " -f8`
 
 get_track_id()
 {
