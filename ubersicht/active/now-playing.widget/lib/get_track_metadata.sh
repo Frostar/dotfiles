@@ -30,7 +30,7 @@ if [ $check -eq 1 ]; then
   if [ "$track_id" == "$cur_track_id" ] && [ -f "$scriptdir/cur_track.json" ]; then
     cur_track_json=`cat $scriptdir/cur_track.json`
   else
-    cur_track_json=`curl -s -X GET "https://api.spotify.com/v1/tracks/$track_id"`
+    cur_track_json=`curl -s -X GET "https://api.spotify.com/v1/tracks/$track_id" -H "Accept: application/json" -H "Authorization: Bearer $(cat ~/.spotify/token)"`
     echo $track_id > $scriptdir/cur_track.id
     echo $cur_track_json > $scriptdir/cur_track.json
   fi
