@@ -19,5 +19,6 @@ progressbar_look = "━▬─"
 display_bitrate = "yes"
 
 # Scripting
-execute_on_song_change = "terminal-notifier -message "$(/usr/local/bin/mpc current --format '%title% by %artist% on %album% (%date%)')" -title 'Now playing' -group mopidy > /dev/null -appIcon $(~/.ncmpcpp/spotify_album_url.sh $(mpc current --format '%file%'))"
+# execute_on_song_change = "terminal-notifier -message "$(/usr/local/bin/mpc current --format '%title% by %artist% on %album% (%date%)')" -title 'Now playing' -group mopidy > /dev/null -appIcon $(~/.ncmpcpp/spotify_album_url.sh $(mpc current --format '%file%'))"
+execute_on_song_change = "terminal-notifier -message "$(/usr/local/bin/mpc current --format '%title% by %artist% on %album% (%date%)')" -title 'Now playing' -group mopidy > /dev/null"
 
