@@ -27,3 +27,7 @@ export TERM=xterm-256color
 # For using rm !(file)
 shopt -s extglob
 
+# If git-completion exist, then load it.
+if [ -f ~/.bash/git-completion.bash ]; then
+    source ~/.bash/git-completion.bash
+fi
