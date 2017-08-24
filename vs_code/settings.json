@@ -1,0 +1,12 @@
+{
+    "vim.disableAnnoyingNeovimMessage": true,
+    "editor.renderWhitespace": "all",
+    "files.trimTrailingWhitespace": true,
+    "workbench.activityBar.visible": true,
+    "window.zoomLevel": -1,
+    "editor.rulers": [
+        80,
+        120
+    ],
+    "editor.fontFamily": "Meslo LG S for Powerline"
+}
