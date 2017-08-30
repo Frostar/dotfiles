@@ -8,5 +8,7 @@
         80,
         120
     ],
-    "editor.fontFamily": "Meslo LG S for Powerline"
+    "editor.fontFamily": "Meslo LG S for Powerline",
+    "workbench.colorTheme": "Visual Studio Dark",
+    "editor.cursorStyle": "block"
 }
