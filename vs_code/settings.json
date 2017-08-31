@@ -10,5 +10,7 @@
     ],
     "editor.fontFamily": "Meslo LG S for Powerline",
     "workbench.colorTheme": "Visual Studio Dark",
+    "editor.tabSize": 4,
+    "editor.insertSpaces": true,
     "editor.cursorStyle": "block"
 }
