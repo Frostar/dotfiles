@@ -24,7 +24,7 @@ chunkc set global_desktop_offset_top     25
 chunkc set global_desktop_offset_bottom  10
 chunkc set global_desktop_offset_left    10
 chunkc set global_desktop_offset_right   10
-chunkc set global_desktop_offset_gap     15
+chunkc set global_desktop_offset_gap     10
 
 
 chunkc set desktop_padding_step_size     10.0
@@ -48,7 +48,7 @@ chunkc set window_region_locked          1
 # chunkc set mouse_modifier              \"cmd shift\"
 chunkc set mouse_modifier                fn
 
-chunkc set preselect_border_color        0xffffff00
+chunkc set preselect_border_color        0xFFFDABAA
 chunkc set preselect_border_width        4
 chunkc set preselect_border_radius       0
 
@@ -67,9 +67,9 @@ chunkc set window_fade_duration          0.5
 #
 
 chunkc set focused_border_color          0xFFB4F89D
-chunkc set focused_border_width          6
+chunkc set focused_border_width          4
 chunkc set focused_border_radius         0
-chunkc set focused_border_skip_floating  0
+chunkc set focused_border_skip_floating  1
 
 #
 # NOTE: specify plugins to load when chunkwm starts.
