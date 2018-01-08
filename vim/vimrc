@@ -57,8 +57,10 @@ let g:ycm_autoclose_preview_window_after_insertion = 1
 " hlsearch trailing
 set hlsearch
 
-" colorscheme badwolf
+" color
 colorscheme badwolf
+highlight Normal ctermbg=none
+highlight NonText ctermbg=none
 
 " whitespaces
 " set list
