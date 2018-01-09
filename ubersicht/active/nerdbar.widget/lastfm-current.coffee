@@ -20,13 +20,13 @@ update: (output, el) ->
     track = data.recenttracks.track[0]
     if track['@attr']
         $('#timestamp').text 'Now Playing'
+        $(".np span:first-child", el).text("  #{track.artist['#text']}" + " - " + "#{track.name} ")
+        $icon = $(".np span.icon", el)
+        $icon.removeClass().addClass("icon")
+        $icon.addClass("fa fa-music")
     else
         return
 
-    $(".np span:first-child", el).text("  #{track.artist['#text']}" + " - " + "#{track.name} ")
-    $icon = $(".np span.icon", el)
-    $icon.removeClass().addClass("icon")
-    $icon.addClass("fa fa-play")
 
 
 style: """
