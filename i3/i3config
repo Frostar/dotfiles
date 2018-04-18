@@ -31,6 +31,9 @@ font pango:Helvetica Neue, fontawesome 9
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
+# max floating window size
+floating_maximum_size 960 x 540
+
 # start a terminal
 # bindsym $mod+Return exec i3-sensible-terminal
 bindsym $mod+Return exec urxvt
@@ -188,6 +191,7 @@ bar {
         inactive_workspace $inactive-border-color $inactive-bg-color $inactive-text-color
         urgent_workspace   $urgent-border-color   $urgent-bg-color   $urgent-text-color
     }
+    tray_padding 5
 }
 
 bindsym $mod+shift+x exec i3lock -i ~/Pictures/shellder-blur.png
