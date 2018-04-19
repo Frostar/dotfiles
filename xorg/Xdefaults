@@ -3,6 +3,11 @@ URxvt.scrollBar: False
 urxvt*transparent: true
 urxvt*shading: 10
 
+# Behavior
+URxvt.perl-ext:	  default,matcher
+URxvt.url-launcher: firefox
+URxvt.matcher.button: 1
+
 # font
 URxvt.font: xft:Meslo LG S for Powerline:size=9
 URxvt.boldFont: xft:Meslo LG S for Powerline:bold:size=9
