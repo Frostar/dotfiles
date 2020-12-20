@@ -1,4 +1,0 @@
-Følgende pakker er installeret for bash i ~/.bash:
-
-Powerline shell (Smart prompt)
-https://github.com/milkbikis/powerline-shell
