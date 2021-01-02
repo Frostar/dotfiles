@@ -1,11 +1,11 @@
 # UI
 URxvt.scrollBar: False
 urxvt*transparent: true
-urxvt*shading: 20
+urxvt*shading: 10
 
 # Behavior
 URxvt.perl-ext:	  default,matcher
-URxvt.url-launcher: qutebrowser
+URxvt.url-launcher: firefox
 URxvt.matcher.button: 1
 
 # font
