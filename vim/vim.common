@@ -1,0 +1,35 @@
+" Should be placed in / linked to ~/.vim.common
+"""
+" Common configuration for Vim, NeoVim and IdeaVim 
+"""
+
+" linenumbers
+set number
+
+" identation
+set smartindent
+set autoindent
+set tabstop=4
+set shiftwidth=4
+set smarttab
+set expandtab
+
+" Highlight cursor line
+set cursorline
+
+" Scroll buffer at x lines from margin
+set scrolloff=8
+
+" Highlight while searching
+set incsearch
+
+" Show mode and commands
+set noshowmode
+set showcmd
+
+" Mouse scroll
+set mouse=nicr
+
+nnoremap L $
+nnoremap H ^
+nnoremap ; :

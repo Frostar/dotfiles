@@ -1,0 +1,6 @@
+" Should be placed in / linked to ~/.ideavimrc
+" Pull common vim configuration
+source ~/.vim.common
+
+" IdeaVim specific configuration
+nnoremap gd :action GotoDeclaration<CR>
