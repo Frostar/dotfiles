@@ -10,7 +10,6 @@ if [ -f $HOME/.local/lib/python3.8/site-packages/powerline/bindings/bash/powerli
     source $HOME/.local/lib/python3.8/site-packages/powerline/bindings/bash/powerline.sh
 fi
 
-
 # CLI colors
 export CLICOLORS=1
 export LSCOLORS=ExFxBxDxCxegedabagacad
@@ -27,6 +26,10 @@ alias la='ll -a'
 alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
+
+if type nvim &> /dev/null; then
+    alias vim='nvim'
+fi
 
 # If git-completion exist, then load it.
 if [ -f ~/.bash/git-completion.bash ]; then
