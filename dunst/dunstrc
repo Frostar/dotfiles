@@ -85,7 +85,7 @@
 
     ### Text ###
 
-    font = Helvetica Neue 9
+    font = Helvetica Neue 10
     #font = Monospae 8
 
     # The spacing between lines.  If the height is smaller than the
