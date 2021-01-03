@@ -164,25 +164,25 @@ bindsym $mod+r mode "resize"
 
 set $bar-color #242424
 set $bg-color #242424
-set $border-color #242424
+set $border-color #B0B0B0
 set $inactive-bg-color #242424
 set $inactive-border-color #242424
 set $urgent-bg-color #C75646
 set $urgent-border-color #C75646
-set $text-color #F7F7F7
+set $text-color #B0B0B0
 set $inactive-text-color #5D5D5D
 set $urgent-text-color #F7F7F7
 set $indicator-color #218693
 
-client.focused          $border-color          $bg-color          $text-color          $indicator-color
+client.focused          $border-color          $border-color          $text-color          $indicator-color
 client.unfocused        $inactive-border-color $inactive-bg-color $inactive-text-color $indicator-color
 client.focused_inactive $inactive-border-color $inactive-bg-color $inactive-text-color $indicator-color
 client.urgent           $urgent-text-color     $urgent-bg-color   $urgent-text-color   $indicator-color
 
 # Gaps configuration
-for_window [class="^.*"] border pixel 2
-gaps inner 5
-gaps outer 5
+for_window [class="^.*"] border pixel 1
+gaps inner 8
+gaps outer 2
 bindsym $mod+z gaps outer current plus 5
 bindsym $mod+shift+z gaps outer current minus 5
 
@@ -194,9 +194,10 @@ bar {
     position top
     colors {
     background $bar-color
-        focused_workspace  $border-color          $bg-color          $text-color
+        focused_workspace  $bg-color              $bg-color          $text-color
         inactive_workspace $inactive-border-color $inactive-bg-color $inactive-text-color
         urgent_workspace   $urgent-border-color   $urgent-bg-color   $urgent-text-color
+    statusline $text-color
     }
     tray_padding 5
 }
@@ -212,4 +213,5 @@ bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle
 exec --no-startup-id nextcloud
 exec --no-startup-id xpad
 exec --no-startup-id dunst
+exec --no-startup-id xmodmap ~/.Xmodmap
 exec_always feh --bg-scale ~/Pictures/bg.png
