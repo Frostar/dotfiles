@@ -2,5 +2,15 @@
 " Pull common vim configuration
 source ~/.vim.common
 
+set surround
+
 " IdeaVim specific configuration
 nnoremap gd :action GotoDeclaration<CR>
+nnoremap gs :action GotoSuperMethod<CR>
+nnoremap gi :action GotoImplementation<CR>
+
+nnoremap == :action ReformatCode<CR>
+vnoremap == :action ReformatCode<CR>
+
+nnoremap cc :action CommentByLineComment<CR>
+vnoremap cc :action CommentByLineComment<CR>

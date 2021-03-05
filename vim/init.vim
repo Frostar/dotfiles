@@ -11,7 +11,7 @@ call plug#begin("~/.vim/plugged")
 call plug#end()
 
 " Plugin Configuration
-let g:deoplete#enable_at_startup = 1
+" let g:deoplete#enable_at_startup = 1
 let g:lightline = {
             \ 'colorscheme' : 'badwolf',
             \ 'active': {
