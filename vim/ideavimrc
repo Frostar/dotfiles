@@ -3,11 +3,13 @@
 source ~/.vim.common
 
 set surround
+set showmode
 
 " IdeaVim specific configuration
 nnoremap gd :action GotoDeclaration<CR>
 nnoremap gs :action GotoSuperMethod<CR>
 nnoremap gi :action GotoImplementation<CR>
+nnoremap gb :action GotoBaseSymbols<CR>
 
 nnoremap == :action ReformatCode<CR>
 vnoremap == :action ReformatCode<CR>
