@@ -140,3 +140,7 @@ jwtd() {
 source ~/.docker/init-zsh.sh || true # Added by Docker Desktop
 source /Users/jenslunding/.docker/init-zsh.sh || true # Added by Docker Desktop
 [[ $commands[kubectl] ]] && source <(kubectl completion zsh)
+
+# Extra https://www.josean.com/posts/how-to-setup-wezterm-terminal
+source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
