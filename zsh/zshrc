@@ -110,6 +110,10 @@ if type glow &> /dev/null; then
 	alias glow="glow -p"
 fi
 
+if type eza &> /dev/null; then
+  alias ls="eza --icons=always"
+fi
+
 # KUBERNETES
 KUBE_PS1_SYMBOL_USE_IMG=true
 KUBE_PS1_PREFIX=[
