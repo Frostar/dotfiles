@@ -1,0 +1,15 @@
+shell-integration = zsh
+theme = Smyck
+window-theme = system
+macos-titlebar-style = tabs
+macos-titlebar-style = tabs
+
+font-family = "MesloLGSDZ Nerd Font Mono"
+font-size = 13
+
+cursor-opacity = 0.9
+cursor-style-blink = true
+
+background-blur-radius = 10
+background-opacity = 0.90
+
