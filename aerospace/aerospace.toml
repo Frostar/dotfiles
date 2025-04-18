@@ -17,11 +17,11 @@ after-startup-command = [
 ]
 
 exec-on-workspace-change = ['/bin/bash', '-c',
-  'aerospace move-node-to-workspace $AEROSPACE_FOCUSED_WORKSPACE --window-id $(get_miniplayer.sh)'
+  'aerospace move-node-to-workspace $AEROSPACE_FOCUSED_WORKSPACE --window-id $(sh ~/.bin/get_miniplayer.sh)'
 ]
 
 # Start AeroSpace at login
-start-at-login = false
+start-at-login = true
 
 # Normalizations. See: https://nikitabobko.github.io/AeroSpace/guide#normalization
 enable-normalization-flatten-containers = true
@@ -202,5 +202,6 @@ alt-shift-l = ['join-with right', 'mode main']
 
 [[on-window-detected]]
 if.window-title-regex-substring = "Spotify Miniplayer"
-run = 'layout floating'
+run = ['layout floating']
+
 
