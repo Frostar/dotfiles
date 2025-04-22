@@ -10,6 +10,6 @@ font-size = 13
 cursor-opacity = 0.9
 cursor-style-blink = true
 
-background-blur-radius = 10
-background-opacity = 0.90
+background-blur-radius = 25
+background-opacity = 0.95
 
