@@ -13,6 +13,7 @@ k9s:
     reactive: false
     noIcons: false
     defaultsToFullScreen: false
+    skin: transparent
   skipLatestRevCheck: false
   disablePodCounting: false
   shellPod:
@@ -27,7 +28,7 @@ k9s:
       namespaces: []
       labels: {}
   logger:
-    tail: 100
+    tail: 1000
     buffer: 5000
     sinceSeconds: -1
     textWrap: false
