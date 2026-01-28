@@ -1,5 +1,5 @@
 shell-integration = zsh
-theme = Smyck
+theme = Gruvbox Dark Hard
 window-theme = system
 macos-titlebar-style = tabs
 macos-titlebar-style = tabs
@@ -13,3 +13,5 @@ cursor-style-blink = true
 background-blur-radius = 25
 background-opacity = 0.95
 
+macos-icon = retro
+macos-icon-frame = beige
