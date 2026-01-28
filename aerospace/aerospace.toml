@@ -13,12 +13,12 @@ after-login-command = []
 # 'after-startup-command' is run after 'after-login-command'
 # Available commands : https://nikitabobko.github.io/AeroSpace/commands
 after-startup-command = [
-  'exec-and-forget borders active_color=0xffe1e3e4 inactive_color=0xff494d64 width=5.0'
+  'exec-and-forget borders active_color=0xfffe7f19 inactive_color=0xff928374 width=5.0'
 ]
 
-exec-on-workspace-change = ['/bin/bash', '-c',
-  'aerospace move-node-to-workspace $AEROSPACE_FOCUSED_WORKSPACE --window-id $(sh ~/.bin/get_miniplayer.sh)'
-]
+# exec-on-workspace-change = [
+#   '/bin/bash', '-c', 'aerospace move-node-to-workspace $AEROSPACE_FOCUSED_WORKSPACE --window-id $(sh ~/.bin/get_miniplayer.sh)'
+# ]
 
 # Start AeroSpace at login
 start-at-login = true
@@ -88,7 +88,7 @@ outer.right =      10
 
 # You can uncomment this line to open up terminal with alt + enter shortcut
 # See: https://nikitabobko.github.io/AeroSpace/commands#exec-and-forget
-alt-ctrl-enter = 'exec-and-forget open -n /Applications/WezTerm.app'
+alt-ctrl-enter = 'exec-and-forget open -n /Applications/Ghostty.app'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#layout
 alt-slash = 'layout tiles horizontal vertical'
@@ -107,8 +107,8 @@ alt-shift-k = 'move up'
 alt-shift-l = 'move right'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#resize
-alt-shift-minus = 'resize smart -50'
-alt-shift-equal = 'resize smart +50'
+alt-shift-minus = 'resize smart -25'
+alt-shift-equal = 'resize smart +25'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#workspace
 alt-1 = 'workspace 1'
