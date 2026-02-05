@@ -141,7 +141,7 @@ jwtd() {
     fi
 }
 
-source $HOME/.docker/init-zsh.sh || true # Added by Docker Desktop
+[[ -f "$HOME/.docker/init-zsh.sh" ]] && source $HOME/.docker/init-zsh.sh || true # Added by Docker Desktop
 [[ $commands[kubectl] ]] && source <(kubectl completion zsh)
 
 # OS-specific plugin directory
@@ -157,6 +157,10 @@ esac
   source "$ZSH_PLUGIN_DIR/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
 
 # Tools
-eval "$(zoxide init zsh)"
-eval "$(vce init zsh)"
-alias cd="z"
+if type vce &> /dev/null; then
+    eval "$(vce init zsh)"
+fi
+if type zoxide &> /dev/null; then
+    eval "$(zoxide init zsh)"
+    alias cd="z"
+fi
