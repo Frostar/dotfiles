@@ -141,5 +141,22 @@ jwtd() {
     fi
 }
 
-# source ~/.docker/init-zsh.sh || true # Added by Docker Desktop
+source $HOME/.docker/init-zsh.sh || true # Added by Docker Desktop
 [[ $commands[kubectl] ]] && source <(kubectl completion zsh)
+
+# OS-specific plugin directory
+case "$(uname)" in
+  Darwin) ZSH_PLUGIN_DIR="/opt/homebrew/share" ;;
+  Linux)  ZSH_PLUGIN_DIR="/usr/share" ;;
+esac
+
+# External plugins
+[[ -f "$ZSH_PLUGIN_DIR/zsh-autosuggestions/zsh-autosuggestions.zsh" ]] && \
+  source "$ZSH_PLUGIN_DIR/zsh-autosuggestions/zsh-autosuggestions.zsh"
+[[ -f "$ZSH_PLUGIN_DIR/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" ]] && \
+  source "$ZSH_PLUGIN_DIR/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
+
+# Tools
+eval "$(zoxide init zsh)"
+eval "$(vce init zsh)"
+alias cd="z"
