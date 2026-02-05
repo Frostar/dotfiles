@@ -4,7 +4,7 @@ window-theme = system
 macos-titlebar-style = tabs
 macos-titlebar-style = tabs
 
-font-family = "MesloLGSDZ Nerd Font Mono"
+font-family = "MesloLGSDZ Nerd Font"
 font-size = 13
 
 cursor-opacity = 0.9
