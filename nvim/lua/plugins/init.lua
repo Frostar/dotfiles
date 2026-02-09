@@ -62,7 +62,10 @@ return {
         "css",
         "go",
         "gomod",
-        "gosum"
+        "gosum",
+        "typescript",
+        "javascript",
+        "tsx"
   	  },
   	},
   },
@@ -99,8 +102,26 @@ return {
     opts = function(_, opts)
       opts.mapping["<Tab>"] = nil
       opts.mapping["<S-Tab>"] = nil
-      opts.completion = { autocomplete = false }
       return opts
     end,
   },
+
+  -- Copilot Chat
+  {
+    "CopilotC-Nvim/CopilotChat.nvim",
+    dependencies = {
+      { "zbirenbaum/copilot.lua" },
+      { "nvim-lua/plenary.nvim" },
+    },
+    build = "make tiktoken",
+    cmd = "CopilotChat",
+    keys = {
+      { "<leader>cc", "<cmd>CopilotChatToggle<cr>", desc = "Toggle Copilot Chat" },
+      { "<leader>ce", "<cmd>CopilotChatExplain<cr>", mode = "v", desc = "Explain selection" },
+      { "<leader>cf", "<cmd>CopilotChatFix<cr>", mode = "v", desc = "Fix selection" },
+      { "<leader>cr", "<cmd>CopilotChatReview<cr>", mode = "v", desc = "Review selection" },
+    },
+    opts = {},
+  },
+
 }
