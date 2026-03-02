@@ -65,7 +65,9 @@ return {
         "gosum",
         "typescript",
         "javascript",
-        "tsx"
+        "tsx",
+        "terraform",
+        "hcl"
   	  },
   	},
   },
@@ -91,6 +93,9 @@ return {
       panel = { enabled = false },
       filetypes = {
         markdown = true,
+        yaml = true,
+        terraform = true,
+        hcl = true,
         help = false,
       },
     },
