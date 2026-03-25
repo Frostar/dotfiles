@@ -156,6 +156,17 @@ esac
 [[ -f "$ZSH_PLUGIN_DIR/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" ]] && \
   source "$ZSH_PLUGIN_DIR/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
 
+# NVM
+export NVM_DIR="$HOME/.nvm"
+case "$(uname)" in
+  Darwin) _NVM_HOME="/opt/homebrew/opt/nvm" ;;
+  Linux)  _NVM_HOME="$NVM_DIR" ;;
+esac
+[ -s "$_NVM_HOME/nvm.sh" ] && \. "$_NVM_HOME/nvm.sh"
+[ -s "$_NVM_HOME/etc/bash_completion.d/nvm" ] && \. "$_NVM_HOME/etc/bash_completion.d/nvm"
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
+unset _NVM_HOME
+
 # Tools
 if type vce &> /dev/null; then
     eval "$(vce init zsh)"
