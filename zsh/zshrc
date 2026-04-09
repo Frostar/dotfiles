@@ -175,3 +175,6 @@ if type zoxide &> /dev/null; then
     eval "$(zoxide init zsh)"
     alias cd="z"
 fi
+if type fzf &> /dev/null; then
+    source <(fzf --zsh)
+fi
