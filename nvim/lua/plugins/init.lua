@@ -67,7 +67,8 @@ return {
         "javascript",
         "tsx",
         "terraform",
-        "hcl"
+        "hcl",
+        "bicep"
   	  },
   	},
   },
@@ -96,6 +97,7 @@ return {
         yaml = true,
         terraform = true,
         hcl = true,
+        bicep = true,
         help = false,
       },
     },
