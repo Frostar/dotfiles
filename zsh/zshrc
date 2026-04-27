@@ -71,7 +71,7 @@ ZSH_THEME="agnoster" # set by `omz`
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 # plugins=(git, docker, virtualenv, kubectl, history, tmux, gh, azure)
-plugins=(git kubectl docker virtualenv history tmux gh azure kube-ps1)
+plugins=(git kubectl docker virtualenv history tmux gh azure kube-ps1 opentofu)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -156,6 +156,10 @@ esac
 [[ -f "$ZSH_PLUGIN_DIR/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" ]] && \
   source "$ZSH_PLUGIN_DIR/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
 
+# If on macos, then and /opt/homebrew/opt/hunch/share/hunch/hunch.zsh exists and source /opt/homebrew/opt/hunch/share/hunch/hunch.zsh 
+[[  $(uname) == "Darwin" && -f "/opt/homebrew/opt/hunch/share/hunch/hunch.zsh" ]] && \
+  source "/opt/homebrew/opt/hunch/share/hunch/hunch.zsh"
+
 # NVM
 export NVM_DIR="$HOME/.nvm"
 case "$(uname)" in
@@ -178,3 +182,4 @@ fi
 if type fzf &> /dev/null; then
     source <(fzf --zsh)
 fi
+
