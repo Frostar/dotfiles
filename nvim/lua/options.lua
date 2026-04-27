@@ -21,6 +21,7 @@ o.smarttab = true
 o.expandtab = true
 
 o.incsearch = true
+o.winborder = "rounded"
 
 -- Whitespace rendering
 o.list = true
