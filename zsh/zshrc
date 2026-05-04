@@ -71,7 +71,7 @@ ZSH_THEME="agnoster" # set by `omz`
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 # plugins=(git, docker, virtualenv, kubectl, history, tmux, gh, azure)
-plugins=(git kubectl docker virtualenv history tmux gh azure kube-ps1 opentofu)
+plugins=(git kubectl docker virtualenv gh azure opentofu dotnet fzf)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -114,24 +114,8 @@ if type eza &> /dev/null; then
   alias ls="eza --icons=always"
 fi
 
-# KUBERNETES
-KUBE_PS1_SYMBOL_USE_IMG=true
-KUBE_PS1_PREFIX=[
-KUBE_PS1_SUFFIX=]
-KUBE_PS1_SYMBOL_PADDING=false
-KUBE_PS1_NS_COLOR=white
-KUBE_PS1_CTX_COLOR=white
-KUBE_PS1_SYMBOL_COLOR=default
-
-
 prompt_context(){
   # empty
-}
-
-prompt_custom() {
-  if [[ -n "$(kube_ps1)" ]]; then
-    prompt_segment cyan default $(kube_ps1)
-  fi
 }
 
 jwtd() {
@@ -178,6 +162,9 @@ fi
 if type zoxide &> /dev/null; then
     eval "$(zoxide init zsh)"
     alias cd="z"
+fi
+if type bat &> /dev/null; then
+    alias cat="bat"
 fi
 if type fzf &> /dev/null; then
     source <(fzf --zsh)
