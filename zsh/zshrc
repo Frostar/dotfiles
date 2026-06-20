@@ -71,7 +71,7 @@ ZSH_THEME="agnoster" # set by `omz`
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 # plugins=(git, docker, virtualenv, kubectl, history, tmux, gh, azure)
-plugins=(git kubectl docker virtualenv history tmux gh azure kube-ps1)
+plugins=(git kubectl docker virtualenv gh azure opentofu dotnet fzf)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -114,24 +114,8 @@ if type eza &> /dev/null; then
   alias ls="eza --icons=always"
 fi
 
-# KUBERNETES
-KUBE_PS1_SYMBOL_USE_IMG=true
-KUBE_PS1_PREFIX=[
-KUBE_PS1_SUFFIX=]
-KUBE_PS1_SYMBOL_PADDING=false
-KUBE_PS1_NS_COLOR=white
-KUBE_PS1_CTX_COLOR=white
-KUBE_PS1_SYMBOL_COLOR=default
-
-
 prompt_context(){
   # empty
-}
-
-prompt_custom() {
-  if [[ -n "$(kube_ps1)" ]]; then
-    prompt_segment cyan default $(kube_ps1)
-  fi
 }
 
 jwtd() {
@@ -150,11 +134,20 @@ case "$(uname)" in
   Linux)  ZSH_PLUGIN_DIR="/usr/share" ;;
 esac
 
+# On macOS, require tap trust for Homebrew plugins
+case "$(uname)" in
+  Darwin) HOMEBREW_REQUIRE_TAP_TRUST=1 ;;
+esac
+
 # External plugins
 [[ -f "$ZSH_PLUGIN_DIR/zsh-autosuggestions/zsh-autosuggestions.zsh" ]] && \
   source "$ZSH_PLUGIN_DIR/zsh-autosuggestions/zsh-autosuggestions.zsh"
 [[ -f "$ZSH_PLUGIN_DIR/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" ]] && \
   source "$ZSH_PLUGIN_DIR/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
+
+# If on macos, then and /opt/homebrew/opt/hunch/share/hunch/hunch.zsh exists and source /opt/homebrew/opt/hunch/share/hunch/hunch.zsh 
+[[  $(uname) == "Darwin" && -f "/opt/homebrew/opt/hunch/share/hunch/hunch.zsh" ]] && \
+  source "/opt/homebrew/opt/hunch/share/hunch/hunch.zsh"
 
 # NVM
 export NVM_DIR="$HOME/.nvm"
@@ -175,3 +168,64 @@ if type zoxide &> /dev/null; then
     eval "$(zoxide init zsh)"
     alias cd="z"
 fi
+if type bat &> /dev/null; then
+    alias cat="bat"
+fi
+if type fzf &> /dev/null; then
+    source <(fzf --zsh)
+fi
+
+# --- AI commit-message suggestion (Copilot backend) -----------------------
+# Type `git commit` then press TAB to fill `git commit -m "…"` generated from
+# your STAGED diff. Review it, edit if needed, then press Enter yourself.
+# It never commits for you. Falls back to normal TAB completion (incl. fzf)
+# everywhere else, and when nothing is staged.
+_ai_commit_suggest() {
+  emulate -L zsh
+  local diff
+  diff=$(git diff --cached --no-color 2>/dev/null)
+  if [[ -z $diff ]]; then
+    zle -M "ai-commit: nothing staged (git add first)"
+    return 1
+  fi
+
+  zle -R "ai-commit: generating…"
+
+  local prompt msg
+  prompt='Generate a single-line git commit message for the staged git diff below. Use Conventional Commits style (e.g. "feat: …", "fix: …"). Output ONLY the message text — no quotes, no code fences, no explanation, no trailing period, max 72 chars. Diff:
+'"$diff"
+  # --available-tools= (empty whitelist) means NO tools are available to the
+  # model, so it cannot run shell commands or edit files; --disable-builtin-mcps
+  # drops the GitHub MCP server. Pure text generation only.
+  msg=$(copilot -p "$prompt" --silent --no-color \
+        --available-tools= --disable-builtin-mcps 2>/dev/null)
+  msg=${msg%%$'\n'*}                       # first line only
+  msg="${msg#"${msg%%[![:space:]]*}"}"     # trim leading whitespace
+  msg="${msg%"${msg##*[![:space:]]}"}"     # trim trailing whitespace
+  msg=${(Q)msg}                            # strip any wrapping quotes
+
+  if [[ -z $msg ]]; then
+    zle -M "ai-commit: no suggestion returned"
+    return 1
+  fi
+
+  BUFFER="git commit -m \"${msg}\""
+  (( CURSOR = ${#BUFFER} - 1 ))            # park cursor before the closing quote
+  zle redisplay
+}
+zle -N _ai_commit_suggest
+
+# Context-aware TAB: generate on `git commit[ …]`, otherwise normal completion.
+_ai_commit_tab() {
+  if [[ $BUFFER == "git commit"(|" "*) ]]; then
+    _ai_commit_suggest
+  elif (( ${+widgets[fzf-completion]} )); then
+    zle fzf-completion          # preserve fzf's TAB completion
+  else
+    zle expand-or-complete      # default TAB completion
+  fi
+}
+zle -N _ai_commit_tab
+bindkey '^I' _ai_commit_tab
+# --------------------------------------------------------------------------
+

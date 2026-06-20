@@ -2,6 +2,13 @@ require "nvchad.options"
 
 -- add yours here!
 
+vim.filetype.add {
+  extension = {
+    bicep = "bicep",
+    bicepparam = "bicep-params",
+  },
+}
+
 local o = vim.o
 o.cursorline = true
 o.cursorlineopt = 'both' -- to enable cursorline!
@@ -14,6 +21,7 @@ o.smarttab = true
 o.expandtab = true
 
 o.incsearch = true
+o.winborder = "rounded"
 
 -- Whitespace rendering
 o.list = true

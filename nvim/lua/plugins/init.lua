@@ -53,6 +53,7 @@ return {
 
   {
     "nvim-treesitter/nvim-treesitter",
+    branch = "main",
   	opts = {
       ensure_installed = {
   	    "vim",
@@ -67,7 +68,8 @@ return {
         "javascript",
         "tsx",
         "terraform",
-        "hcl"
+        "hcl",
+        "bicep"
   	  },
   	},
   },
@@ -82,7 +84,7 @@ return {
         enabled = true,
         auto_trigger = true,
         keymap = {
-          accept = "<Tab>",
+          accept = false,
           accept_word = "<C-Right>",
           accept_line = "<C-l>",
           next = "<M-]>",
@@ -96,6 +98,7 @@ return {
         yaml = true,
         terraform = true,
         hcl = true,
+        bicep = true,
         help = false,
       },
     },
@@ -107,6 +110,76 @@ return {
     opts = function(_, opts)
       opts.mapping["<Tab>"] = nil
       opts.mapping["<S-Tab>"] = nil
+      return opts
+    end,
+  },
+
+  -- Sidekick: Copilot Next Edit Suggestions + AI CLI terminal
+  {
+    "folke/sidekick.nvim",
+    event = "VeryLazy",
+    dependencies = { "zbirenbaum/copilot.lua" },
+    opts = {
+      nes = { enabled = true },
+    },
+    keys = {
+      {
+        "<Tab>",
+        function()
+          if require("sidekick").nes_jump_or_apply() then
+            return
+          end
+          if require("copilot.suggestion").is_visible() then
+            require("copilot.suggestion").accept()
+            return
+          end
+          return "<Tab>"
+        end,
+        mode = { "i", "n" },
+        expr = true,
+        desc = "Sidekick NES → Copilot → Tab",
+      },
+      {
+        "<leader>aa",
+        function() require("sidekick.cli").toggle() end,
+        desc = "Sidekick toggle CLI",
+      },
+      {
+        "<leader>as",
+        function() require("sidekick.cli").select() end,
+        desc = "Sidekick pick CLI",
+      },
+      {
+        "<leader>ap",
+        function() require("sidekick.cli").prompt() end,
+        mode = { "n", "v" },
+        desc = "Sidekick prompt",
+      },
+    },
+  },
+
+  -- Telescope: make ripgrep follow symbolic links so live_grep / find_files
+  -- can search into symlinked directories (rg skips them by default).
+  {
+    "nvim-telescope/telescope.nvim",
+    opts = function(_, opts)
+      opts.defaults = opts.defaults or {}
+      opts.defaults.vimgrep_arguments = {
+        "rg",
+        "--color=never",
+        "--no-heading",
+        "--with-filename",
+        "--line-number",
+        "--column",
+        "--smart-case",
+        "-L", -- follow symbolic links
+      }
+
+      opts.pickers = opts.pickers or {}
+      opts.pickers.find_files = {
+        find_command = { "rg", "--files", "--hidden", "-L", "--glob", "!**/.git/*" },
+      }
+
       return opts
     end,
   },
