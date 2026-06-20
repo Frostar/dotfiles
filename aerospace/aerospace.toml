@@ -204,4 +204,18 @@ alt-shift-l = ['join-with right', 'mode main']
 if.window-title-regex-substring = "Spotify Miniplayer"
 run = ['layout floating']
 
+[[on-window-detected]]
+if.app-name-regex-substring = '(?i)webex'
+if.window-title-regex-substring = '(?i)reminder'
+run = ['layout floating']
+
+[[on-window-detected]]
+if.app-name-regex-substring = '(?i)webex'
+run = ['layout tiling']
+
+[[on-window-detected]]
+if.app-name-regex-substring = '(?i)webex'
+if.window-title-regex-substring = '(?i)reminder'
+run = ['layout floating']
+
 
