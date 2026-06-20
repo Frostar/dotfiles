@@ -158,6 +158,32 @@ return {
     },
   },
 
+  -- Telescope: make ripgrep follow symbolic links so live_grep / find_files
+  -- can search into symlinked directories (rg skips them by default).
+  {
+    "nvim-telescope/telescope.nvim",
+    opts = function(_, opts)
+      opts.defaults = opts.defaults or {}
+      opts.defaults.vimgrep_arguments = {
+        "rg",
+        "--color=never",
+        "--no-heading",
+        "--with-filename",
+        "--line-number",
+        "--column",
+        "--smart-case",
+        "-L", -- follow symbolic links
+      }
+
+      opts.pickers = opts.pickers or {}
+      opts.pickers.find_files = {
+        find_command = { "rg", "--files", "--hidden", "-L", "--glob", "!**/.git/*" },
+      }
+
+      return opts
+    end,
+  },
+
   -- Copilot Chat
   {
     "CopilotC-Nvim/CopilotChat.nvim",
