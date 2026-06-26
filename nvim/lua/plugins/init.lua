@@ -15,6 +15,24 @@ return {
   },
 
 
+  -- Rust: rustaceanvim wraps rust-analyzer (inlay hints, runnables, macro
+  -- expand, cargo integration). Do NOT also add rust_analyzer to the servers
+  -- list in configs/lspconfig.lua — this plugin owns the client.
+  {
+    "mrcjkb/rustaceanvim",
+    version = "^6",
+    lazy = false, -- plugin sets up its own filetype hooks
+    init = function()
+      -- Reuse NvChad's completion capabilities. LSP keymaps are applied
+      -- automatically via NvChad's global LspAttach autocmd.
+      vim.g.rustaceanvim = {
+        server = {
+          capabilities = require("nvchad.configs.lspconfig").capabilities,
+        },
+      }
+    end,
+  },
+
   -- test new blink
   -- { import = "nvchad.blink.lazyspec" },
 
@@ -53,7 +71,6 @@ return {
 
   {
     "nvim-treesitter/nvim-treesitter",
-    branch = "main",
   	opts = {
       ensure_installed = {
   	    "vim",
@@ -69,7 +86,9 @@ return {
         "tsx",
         "terraform",
         "hcl",
-        "bicep"
+        "bicep",
+        "rust",
+        "toml"
   	  },
   	},
   },
@@ -133,11 +152,18 @@ return {
             require("copilot.suggestion").accept()
             return
           end
+          -- no AI suggestion: in normal mode go to next buffer; in insert mode emit a real Tab
+          if vim.fn.mode() == "n" then
+            vim.schedule(function()
+              require("nvchad.tabufline").next()
+            end)
+            return ""
+          end
           return "<Tab>"
         end,
         mode = { "i", "n" },
         expr = true,
-        desc = "Sidekick NES → Copilot → Tab",
+        desc = "Sidekick NES → Copilot → next buffer/Tab",
       },
       {
         "<leader>aa",

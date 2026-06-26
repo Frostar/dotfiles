@@ -1,6 +1,6 @@
 require("nvchad.configs.lspconfig").defaults()
 
-local servers = { "html", "cssls", "pyright", "ansible-language-server", "clangd", "omnisharp", "gopls", "ts_ls", "terraformls", "yamlls", "bicep" }
+local servers = { "html", "cssls", "pyright", "ansiblels", "clangd", "omnisharp", "gopls", "ts_ls", "terraformls", "yamlls", "bicep"}
 vim.lsp.enable(servers)
 
 vim.lsp.config("bicep", {
