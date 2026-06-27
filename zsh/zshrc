@@ -159,6 +159,14 @@ esac
 [ -s "$_NVM_HOME/etc/bash_completion.d/nvm" ] && \. "$_NVM_HOME/etc/bash_completion.d/nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
 unset _NVM_HOME
+#
+# Local bin
+case ":$PATH:" in *":$HOME/.local/bin:"*) ;; *) export PATH="$HOME/.local/bin:$PATH" ;; esac
+
+# Add $HOME/.cargo/bin to PATH if it exists
+if [[ -d "$HOME/.cargo/bin" ]]; then
+    export PATH="$HOME/.cargo/bin:$PATH"
+fi
 
 # Tools
 if type vce &> /dev/null; then
@@ -173,6 +181,9 @@ if type bat &> /dev/null; then
 fi
 if type fzf &> /dev/null; then
     source <(fzf --zsh)
+fi
+if type sara &> /dev/null; then
+    source <(COMPLETE=zsh sara)
 fi
 
 # --- AI commit-message suggestion (Copilot backend) -----------------------
@@ -228,4 +239,5 @@ _ai_commit_tab() {
 zle -N _ai_commit_tab
 bindkey '^I' _ai_commit_tab
 # --------------------------------------------------------------------------
+
 
