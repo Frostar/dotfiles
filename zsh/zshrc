@@ -208,8 +208,13 @@ _ai_commit_suggest() {
   # --available-tools= (empty whitelist) means NO tools are available to the
   # model, so it cannot run shell commands or edit files; --disable-builtin-mcps
   # drops the GitHub MCP server. Pure text generation only.
-  msg=$(copilot -p "$prompt" --silent --no-color \
+  # COPILOT_HOME points at a throwaway dir so this call's session does NOT land
+  # in ~/.copilot's resume list (auth lives elsewhere, so this stays working).
+  local cop_home
+  cop_home=$(mktemp -d)
+  msg=$(COPILOT_HOME="$cop_home" copilot -p "$prompt" --silent --no-color \
         --available-tools= --disable-builtin-mcps 2>/dev/null)
+  rm -rf "$cop_home"
   msg=${msg%%$'\n'*}                       # first line only
   msg="${msg#"${msg%%[![:space:]]*}"}"     # trim leading whitespace
   msg="${msg%"${msg##*[![:space:]]}"}"     # trim trailing whitespace
