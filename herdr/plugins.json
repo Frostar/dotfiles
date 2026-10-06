@@ -2,7 +2,7 @@
   {
     "plugin_id": "persiyanov.reviewr",
     "name": "reviewr",
-    "version": "0.29.0",
+    "version": "0.44.0",
     "min_herdr_version": "0.7.5",
     "description": "Review agent-written diffs beside the chat and add line comments to the agent input.",
     "manifest_path": "/Users/jenslunding/.config/herdr/plugins/github/persiyanov.reviewr-e87b654a74f8/herdr-plugin.toml",
@@ -69,6 +69,14 @@
           "herdr/pane.sh",
           "auto-open"
         ]
+      },
+      {
+        "on": "worktree.opened",
+        "command": [
+          "bash",
+          "herdr/pane.sh",
+          "auto-open"
+        ]
       }
     ],
     "panes": [
@@ -87,9 +95,9 @@
       "kind": "github",
       "owner": "persiyanov",
       "repo": "herdr-reviewr",
-      "resolved_commit": "42ccaaa72176937181c82a91484f97466fb5ed59",
+      "resolved_commit": "c9a187ff2e701d1619be2ed22d101a6225916cd6",
       "managed_path": "/Users/jenslunding/.config/herdr/plugins/github/persiyanov.reviewr-e87b654a74f8",
-      "installed_unix_ms": 1785844798240
+      "installed_unix_ms": 1791183891385
     }
   }
 ]
