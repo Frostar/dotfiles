@@ -126,7 +126,7 @@ jwtd() {
 }
 
 [[ -f "$HOME/.docker/init-zsh.sh" ]] && source $HOME/.docker/init-zsh.sh || true # Added by Docker Desktop
-[[ $commands[kubectl] ]] && source <(kubectl completion zsh)
+# kubectl completion is provided by the oh-my-zsh kubectl plugin (cached)
 
 # OS-specific plugin directory
 case "$(uname)" in
@@ -149,16 +149,26 @@ esac
 [[  $(uname) == "Darwin" && -f "/opt/homebrew/opt/hunch/share/hunch/hunch.zsh" ]] && \
   source "/opt/homebrew/opt/hunch/share/hunch/hunch.zsh"
 
-# NVM
+# NVM (lazy-loaded: costs nothing at startup, loads on first use)
 export NVM_DIR="$HOME/.nvm"
 case "$(uname)" in
   Darwin) _NVM_HOME="/opt/homebrew/opt/nvm" ;;
   Linux)  _NVM_HOME="$NVM_DIR" ;;
 esac
-[ -s "$_NVM_HOME/nvm.sh" ] && \. "$_NVM_HOME/nvm.sh"
-[ -s "$_NVM_HOME/etc/bash_completion.d/nvm" ] && \. "$_NVM_HOME/etc/bash_completion.d/nvm"
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
-unset _NVM_HOME
+if [ -s "$_NVM_HOME/nvm.sh" ]; then
+  _nvm_lazy_load() {
+    unset -f nvm node npm npx 2>/dev/null
+    \. "$_NVM_HOME/nvm.sh"
+    [ -s "$_NVM_HOME/etc/bash_completion.d/nvm" ] && \. "$_NVM_HOME/etc/bash_completion.d/nvm"
+    [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
+  }
+  for _cmd in nvm node npm npx; do
+    eval "${_cmd}() { _nvm_lazy_load; ${_cmd} \"\$@\"; }"
+  done
+  unset _cmd
+else
+  unset _NVM_HOME
+fi
 #
 # Local bin
 case ":$PATH:" in *":$HOME/.local/bin:"*) ;; *) export PATH="$HOME/.local/bin:$PATH" ;; esac
@@ -170,7 +180,13 @@ fi
 
 # Tools
 if type vce &> /dev/null; then
-    eval "$(vce init zsh)"
+    # Cache `vce init zsh` output; regenerate only when the vce binary changes
+    _vce_cache="$HOME/.cache/vce-init.zsh"
+    if [[ ! -s "$_vce_cache" || "${commands[vce]}" -nt "$_vce_cache" ]]; then
+        mkdir -p "$HOME/.cache" && vce init zsh > "$_vce_cache"
+    fi
+    source "$_vce_cache"
+    unset _vce_cache
 fi
 if type zoxide &> /dev/null; then
     eval "$(zoxide init zsh)"
