@@ -71,6 +71,8 @@ return {
 
   {
     "nvim-treesitter/nvim-treesitter",
+    branch = "main",
+    lazy = false,
   	opts = {
       ensure_installed = {
   	    "vim",
@@ -123,16 +125,6 @@ return {
     },
   },
 
-  -- Remove Tab from cmp so Copilot can use it
-  {
-    "hrsh7th/nvim-cmp",
-    opts = function(_, opts)
-      opts.mapping["<Tab>"] = nil
-      opts.mapping["<S-Tab>"] = nil
-      return opts
-    end,
-  },
-
   -- Sidekick: Copilot Next Edit Suggestions + AI CLI terminal
   {
     "folke/sidekick.nvim",
@@ -143,7 +135,7 @@ return {
     },
     keys = {
       {
-        "<Tab>",
+        "<C-y>",
         function()
           if require("sidekick").nes_jump_or_apply() then
             return
@@ -152,18 +144,9 @@ return {
             require("copilot.suggestion").accept()
             return
           end
-          -- no AI suggestion: in normal mode go to next buffer; in insert mode emit a real Tab
-          if vim.fn.mode() == "n" then
-            vim.schedule(function()
-              require("nvchad.tabufline").next()
-            end)
-            return ""
-          end
-          return "<Tab>"
         end,
         mode = { "i", "n" },
-        expr = true,
-        desc = "Sidekick NES → Copilot → next buffer/Tab",
+        desc = "Sidekick NES → Copilot",
       },
       {
         "<leader>aa",
