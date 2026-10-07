@@ -241,6 +241,13 @@ _ai_commit_suggest() {
     return 1
   fi
 
+  # Prefix the Jira ticket when the branch starts with one (DEV-9_foo → [DEV-9]).
+  local branch
+  branch=$(git symbolic-ref --short -q HEAD 2>/dev/null)
+  if [[ $branch =~ '^([A-Z][A-Z0-9]+-[0-9]+)([^0-9]|$)' ]]; then
+    msg="[${match[1]}] ${msg#\[${match[1]}\] }"
+  fi
+
   BUFFER="git commit -m \"${msg}\""
   (( CURSOR = ${#BUFFER} - 1 ))            # park cursor before the closing quote
   zle redisplay
